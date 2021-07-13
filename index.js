@@ -132,10 +132,42 @@ Puppies less than 1 year
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
+let dogFoodAmount;
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(age ,weight){
+  if (age >=1){
+    if(Math.floor(weight) <= 5){
+      dogFoodAmount=0.05*weight;
+    }
+    else if(Math.floor(weight)<=10){
+      dogFoodAmount=0.04*weight;
+    }
+    else if(Math.floor(weight)<=15){
+      dogFoodAmount=0.03*weight;
+    }
+    else{
+      dogFoodAmount=0.02*weight;
+    }
+  }
+  else if(age>0 && age<1){
+    if (age<0.1667){
+      dogFoodAmount = 0;
+      console.log("This puppy is still suckling from its mother source.")
+    }
+    else if (age>=0.1667 && age<0.333){
+      dogFoodAmount=0.1*weight;
+    }
+    else if (age>0.333 && age<0.5833){
+      dogFoodAmount=0.05*weight;
+    }
+    else if (age>=0.5833 && age<1){
+      dogFoodAmount=0.04*weight;
+    }
+  }
+};
+hungryDog(1,15);
+console.log(dogFoodAmount);
+
 
 
 
@@ -159,6 +191,8 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+
+
 
 function game(user, computer){
   /*add your code here*/
