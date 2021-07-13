@@ -20,6 +20,16 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 16;
+
+if (votingAge >= 18){
+  console.log("True!");
+}
+else{
+  console.log("False!")
+}
+
+
 
 
 /*
@@ -32,7 +42,13 @@ Do the following:
 
    HINT: no function required
 */
+ var var1=12;
+ var var2=13;
 
+ if(var1<var2){
+   var1=2*var1;
+   console.log(var1);
+ }
 
 
 
@@ -48,6 +64,12 @@ Do the following:
    HINT: look up the Number method
 */
 
+var var1='1999';
+var var2 =Number(var1)
+console.log(var2)
+
+
+
 
 
 
@@ -60,9 +82,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b;
 }
+
+console.log(multiply(3.4,6.3));
 
 
 
@@ -76,8 +100,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(a){
+  return a*7
 }
 
 
@@ -183,10 +207,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      for(let i=number; i>0; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`
+      }
 }
 
+console.log(annoyingSong(100))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
