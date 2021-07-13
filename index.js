@@ -137,31 +137,31 @@ let dogFoodAmount;
 function hungryDog(age ,weight){
   if (age >=1){
     if(Math.floor(weight) <= 5){
-      dogFoodAmount=0.05*weight;
+      return dogFoodAmount=0.05*weight;
     }
     else if(Math.floor(weight)<=10){
-      dogFoodAmount=0.04*weight;
+      return dogFoodAmount=0.04*weight;
     }
     else if(Math.floor(weight)<=15){
-      dogFoodAmount=0.03*weight;
+      return dogFoodAmount=0.03*weight;
     }
     else{
-      dogFoodAmount=0.02*weight;
+      return dogFoodAmount=0.02*weight;
     }
   }
   else if(age>0 && age<1){
     if (age<0.1667){
-      dogFoodAmount = 0;
+      return dogFoodAmount = 0;
       console.log("This puppy is still suckling from its mother source.")
     }
     else if (age>=0.1667 && age<0.333){
-      dogFoodAmount=0.1*weight;
+      return dogFoodAmount=0.1*weight;
     }
     else if (age>0.333 && age<0.5833){
-      dogFoodAmount=0.05*weight;
+      return dogFoodAmount=0.05*weight;
     }
     else if (age>=0.5833 && age<1){
-      dogFoodAmount=0.04*weight;
+      return dogFoodAmount=0.04*weight;
     }
   }
 };
@@ -231,8 +231,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  var miles= km*0.621371;
+  return miles;
 }
 
 
@@ -245,8 +246,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  var feet= cm/ 30.48;
+  return feet;
 }
 
 
