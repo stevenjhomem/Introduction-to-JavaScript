@@ -165,7 +165,7 @@ function hungryDog(age ,weight){
     }
   }
 };
-hungryDog(1,15);
+hungryDog(0.4,15);
 console.log(dogFoodAmount);
 
 
@@ -192,11 +192,31 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computer = Math.random()
 
+if (computer <= 1/3){
+  computer = 'rock';
+}
+else if (computer <=2/3){
+  computer ='paper';
+}
+else{
+  computer = 'scissors';
+}
+
+console.log(computer);
 
 function game(user, computer){
-  /*add your code here*/
-}
+  if (user === computer) {
+    return "it's a tie"
+  }
+  else if (user === 'rock' && computer === 'scissors' || user === 'scissors' && computer === 'paper' || user === 'paper' && computer === 'rock') {
+    return "you win!"
+  }
+  else {
+    return "you lose!"
+  }
+};
 
 
 
