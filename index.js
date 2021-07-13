@@ -132,42 +132,32 @@ Puppies less than 1 year
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-let dogFoodAmount;
 
-function hungryDog(age ,weight){
-  if (age >=1){
-    if(Math.floor(weight) <= 5){
-      return dogFoodAmount=0.05*weight;
+function hungryDog(weight, age){
+  if (age >= 1 && weight<=5){
+    return weight*0.05;
+  }
+  else if (age >= 1 && weight>5 && weight<=10){
+    return weight*0.04;
+  }
+  else if (age >= 1 && weight>10 && weight<=15){
+    return weight*0.03;
+  }
+  else if (age >= 1 && weight>15){
+    return weight*0.02;
+  }else if (age <1 ){
+    if( age>=0.16666667 && age <= 0.333333){
+      return weight*0.1;
     }
-    else if(Math.floor(weight)<=10){
-      return dogFoodAmount=0.04*weight;
-    }
-    else if(Math.floor(weight)<=15){
-      return dogFoodAmount=0.03*weight;
+    else if (age<0.333333 && age <=0.583333){
+      return weight*0.05;
     }
     else{
-      return dogFoodAmount=0.02*weight;
+      return weight*0.04;
     }
   }
-  else if(age>0 && age<1){
-    if (age<0.1667){
-      return dogFoodAmount = 0;
-      console.log("This puppy is still suckling from its mother source.")
-    }
-    else if (age>=0.1667 && age<0.333){
-      return dogFoodAmount=0.1*weight;
-    }
-    else if (age>0.333 && age<0.5833){
-      return dogFoodAmount=0.05*weight;
-    }
-    else if (age>=0.5833 && age<1){
-      return dogFoodAmount=0.04*weight;
-    }
-  }
-};
-hungryDog(0.4,15);
-console.log(dogFoodAmount);
-
+}
+console.log(hungryDog(1,15));
 
 
 
